@@ -1,6 +1,9 @@
 #!/bin/bash
 
+
+
 #Set enviroment variables
+IP_ADDRESS=$(ip addr show enp0s3 | grep 'inet ' | awk '{print $2}' | cut -d/ -f1)
 BUILD_DIR="/root/kor2"
 HTTPD_USERNAME="admin"
 HTTPD_PASSWORD="korcese"
@@ -56,3 +59,4 @@ docker-compose up -d
 #Start container and move movies
 docker exec -it korcese sh convert.sh
 docker exec -it korcese bash -c "echo $HTTPD_PASSWORD | htpasswd -ci /movies/.htpasswd $HTTPD_USERNAME" 
+echo "Your site is available. Type this address into any browser: $IP_ADDRESS:9511"
