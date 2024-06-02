@@ -1,13 +1,13 @@
 #!/bin/bash
 
 #Set enviroment variables
-BUILD_DIR="/root/kor"
-HTTPD_USERNAME="honeybuns"
-HTTPD_PASSWORD="smelly"
+BUILD_DIR="/root/kor2"
+HTTPD_USERNAME="admin"
+HTTPD_PASSWORD="korcese"
 VID_DIR="/videos"
-WIN_USER="Dummy"
-WIN_PW="youdumb"
-WIN_DIR="//10.0.0.236/Videos2"
+WIN_USER="Korcese"
+WIN_PW="korcese"
+WIN_DIR="// /Videos"
 
 #Install podman and enable service.
 yum install docker -y
