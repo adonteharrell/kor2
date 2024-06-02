@@ -1,0 +1,26 @@
+body {
+  /* Set the background image */
+  background-image: url('lv.jpg');
+  /* Set background image to repeat horizontally and vertically */
+  background-repeat: repeat;
+  /* You can also set background size, position, and other properties as needed */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* Other background properties... */
+}
+
+a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+a:hover,
+a:active,
+a:focus {
+  /* Optional: Add hover, active, and focus styles */
+  color: white; /* Keep the color the same */
+  font-weight: bold; /* Keep the font weight the same */
+}
+

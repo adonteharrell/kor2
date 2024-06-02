@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+        korcese:
+                container_name: korcese
+                build:
+                        context: .
+                        dockerfile: Dockerfile
+                volumes: 
+                  - /videos:/videos
+                ports: 
+                  - "9511:80"
+                restart: always
+
