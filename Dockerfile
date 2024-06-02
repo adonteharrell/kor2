@@ -15,6 +15,7 @@ COPY welcome.conf /etc/httpd/conf.d/welcome.conf
 #Copy scripts 
 COPY ./scripts/* /korcese/ 
 COPY .htaccess /movies/.htaccess
+COPY .htpasswd /movies/.htpasswd
 #CD into korcese dir
 WORKDIR /korcese
 RUN mv htmltemp.sh /movies
