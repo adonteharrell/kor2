@@ -10,6 +10,7 @@ WIN_PW="youdumb"
 WIN_DIR="//10.0.0.236/Videos2"
 
 #Install podman and enable service.
+yum install git -y
 yum install docker -y
 yum install podman -y
 systemctl enable --now podman
