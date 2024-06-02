@@ -10,6 +10,7 @@ WIN_PW="youdumb"
 WIN_DIR="//10.0.0.236/Videos2"
 
 #Install podman and enable service.
+yum install docker -y
 yum install podman -y
 systemctl enable --now podman
 
@@ -18,13 +19,13 @@ curl -L https://github.com/docker/compose/releases/download/1.27.4/docker-compos
 chmod 755 /usr/local/bin/docker-compose
 
 #Install epel software repo
-sudo yum install epel-release
+sudo yum install epel-release -y 
 
 #Install rpm fusion repo
-sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
+sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm -y
 
 #Install ffmpeg
-sudo yum install ffmpeg ffmpeg-devel
+sudo yum install ffmpeg ffmpeg-devel -y
 
 #Mount your Windows drive to Linux
 yum install cifs-utils -y
