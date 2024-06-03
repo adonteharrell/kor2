@@ -61,5 +61,7 @@ docker exec -it korcese sh convert.sh
 docker exec -it korcese bash -c "echo $HTTPD_PASSWORD | htpasswd -ci /movies/.htpasswd $HTTPD_USERNAME" 
 echo "Your site is available. Type this address into any browser: $IP_ADDRESS:9511"
 
+yum install firefox -y
+
 mkdir -p /home/korcese/.config/autostart
-cp ./firefox.start
+cp ./korcese.desktop /home/korcese/.config/autostart/korcese.desktop
