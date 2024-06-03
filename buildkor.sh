@@ -66,6 +66,10 @@ echo "Your site is available. Type this address into any browser: $IP_ADDRESS:95
 #Install firefox
 yum install firefox -y
 
+#Enable autologin
+rm -f /etc/gdm/custom.conf
+cp ./custom.conf /etc/gdm/custom.conf
+
 #Make sure firefox opens at boot
 mkdir -p /home/korcese/.config/autostart
 cp ./korcese.desktop /home/korcese/.config/autostart/korcese.desktop
