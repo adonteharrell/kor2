@@ -1,1 +1,8 @@
-
+[Desktop Entry]
+Type=Application
+Exec=gnome-terminal -- bash -c "/home/korcese/start_firefox.sh; exec bash"
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Korcese
+Comment=Korcese
