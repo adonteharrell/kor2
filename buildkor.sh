@@ -38,6 +38,7 @@ yum install cifs-utils -y
 
 mkdir $VID_DIR
 sudo mount -t cifs $WIN_DIR $VID_DIR -o username=$WIN_USER,password=$WIN_PW
+echo "$WIN_DIR $VID_DIR cifs username=$WIN_USER,password=$WIN_PW,iocharset=utf8,uid=1000,gid=1000 0 0" >> /etc/fstab
 
 #Convert all movie files to .mp4
 cd $VID_DIR
