@@ -74,3 +74,6 @@ cp ./custom.conf /etc/gdm/custom.conf
 #Make sure firefox opens at boot
 mkdir -p /home/korcese/.config/autostart
 cp ./korcese.desktop /home/korcese/.config/autostart/korcese.desktop
+
+sudo systemctl set-default graphical.target
+sudo reboot
