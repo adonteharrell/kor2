@@ -3,6 +3,7 @@
 
 
 #Set enviroment variables
+read -p "Enter your Video servers IP: " IP
 IP_ADDRESS=$(ip addr show enp0s3 | grep 'inet ' | awk '{print $2}' | cut -d/ -f1)
 BUILD_DIR="/root/kor2"
 HTTPD_USERNAME="admin"
@@ -10,7 +11,8 @@ HTTPD_PASSWORD="korcese"
 VID_DIR="/videos"
 WIN_USER="Korcese"
 WIN_PW="korcese"
-WIN_DIR="// /Videos"
+WIN_DIR="//$IP/Videos"
+
 
 #Install podman and enable service.
 yum install docker -y
@@ -61,7 +63,9 @@ docker exec -it korcese sh convert.sh
 docker exec -it korcese bash -c "echo $HTTPD_PASSWORD | htpasswd -ci /movies/.htpasswd $HTTPD_USERNAME" 
 echo "Your site is available. Type this address into any browser: $IP_ADDRESS:9511"
 
+#Install firefox
 yum install firefox -y
 
+#Make sure firefox opens at boot
 mkdir -p /home/korcese/.config/autostart
 cp ./korcese.desktop /home/korcese/.config/autostart/korcese.desktop
