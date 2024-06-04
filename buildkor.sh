@@ -76,12 +76,21 @@ yum install firefox -y
 
 chmod +x ./start_firefox.sh
 chmod +x ./restartkor.sh
+chmod +x ./menu.sh
+chmod 644 ./.bash_profile
+
+cp ./menu.sh /home/korcese/menu.sh
 cp ./start_firefox.sh /home/korcese/start_firefox.sh
 cp ./restartkor.sh /home/korcese/restartkor.sh 
+cp ./.bash_profile /home/korcese/.bash_profile
 
 #Enable autologin
 rm -f /etc/gdm/custom.conf
 cp ./custom.conf /etc/gdm/custom.conf
+
+#Enable menu
+rm -f /home/korcese/.bash_profile
+cp ./
 
 #Make sure firefox opens at boot
 mkdir -p /home/korcese/.config/autostart
