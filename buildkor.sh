@@ -37,7 +37,15 @@ yum install cifs-utils -y
 
 mkdir $VID_DIR
 sudo mount -t cifs $WIN_DIR $VID_DIR -o username=$WIN_USER,password=$WIN_PW
-echo "$WIN_DIR $VID_DIR cifs username=$WIN_USER,password=$WIN_PW,iocharset=utf8,uid=1000,gid=1000 0 0" >> /etc/fstab
+
+fstab="$WIN_DIR $VID_DIR cifs username=$WIN_USER,password=$WIN_PW,iocharset=utf8,uid=1000,gid=1000 0 0"
+
+if ! grep -qF "$fstab" /etc/fstab; then
+    # If the entry does not exist, add it to /etc/fstab
+    echo "$fstab" | sudo tee -a /etc/fstab
+else
+    echo "Entry already exists in fstab."
+fi
 
 #Convert all movie files to .mp4
 cd $VID_DIR
