@@ -13,7 +13,6 @@ WIN_USER="Korcese"
 WIN_PW="korcese"
 WIN_DIR="//$IP/Videos"
 
-
 #Install podman and enable service.
 yum install docker -y
 yum install podman -y
@@ -68,7 +67,9 @@ echo "Your site is available. Type this address into any browser: $IP_ADDRESS:95
 yum install firefox -y
 
 chmod +x ./start_firefox.sh
-cp ./start_firefox.sh /home/korcese/start_firefox.sh 
+chmod +x ./restartkor.sh
+cp ./start_firefox.sh /home/korcese/start_firefox.sh
+cp ./start_firefox.sh /home/korcese/restartkor.sh 
 
 #Enable autologin
 rm -f /etc/gdm/custom.conf
