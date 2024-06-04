@@ -5,7 +5,7 @@
 #Set enviroment variables
 read -p "Enter your Video servers IP: " IP
 IP_ADDRESS=$(ip addr show enp0s3 | grep 'inet ' | awk '{print $2}' | cut -d/ -f1)
-BUILD_DIR="/root/kor2"
+BUILD_DIR="/home/korcese/kor2"
 HTTPD_USERNAME="admin"
 HTTPD_PASSWORD="korcese"
 VID_DIR="/videos"
