@@ -23,7 +23,7 @@ clear -x
 while true
 do
          echo -e " Movies: ${BOLD} $movies ${CLEAR}                        $time $pm"
-         cat /home/korcese/splash
+         cat /root/kor2/splash
          echo -e "$kor_status"
          echo -e "Your IP Address is: $IP_ADDRESS"
          read -p "
