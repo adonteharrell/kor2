@@ -25,6 +25,7 @@ do
          echo -e " Movies: ${BOLD} $movies ${CLEAR}                        $time $pm"
          cat /home/korcese/splash
          echo -e "$kor_status"
+         echo -e "Your IP Address is: $IP_ADDRESS"
          read -p "
          1. Build Korcese
          2. Update Korcese
