@@ -77,7 +77,7 @@ yum install firefox -y
 chmod +x ./start_firefox.sh
 chmod +x ./restartkor.sh
 cp ./start_firefox.sh /home/korcese/start_firefox.sh
-cp ./start_firefox.sh /home/korcese/restartkor.sh 
+cp ./restartkor.sh /home/korcese/restartkor.sh 
 
 #Enable autologin
 rm -f /etc/gdm/custom.conf
